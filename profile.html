@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGYEONG</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/profilestyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/profile.js" defer></script>
+</head>
+
+<!-- <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false"> -->
+
+<body>
+    <header>
+        <p><a href="index.html">HONG</a></p>
+        <nav>
+            <ul class="menu">
+                <li><a href="work.html" class="menu-btn">WORKS</a></li>
+                <li><a href="profile.html" class="menu-btn active">PROFILE</a></li>
+                <li><a href="contact.html" class="menu-btn">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="profile-container">
+        <!-- 왼쪽 정보 -->
+        <section class="info-left">
+            <h2>넓고 깊은 상상력으로 <br> 하늘 높이 도약하는 <span class="highlight"><b>홍호경</b></span>입니다. </h2>
+            <br>
+            <p>세상을 담는 그릇은 넓을수록,
+                비추는 하늘은 높을수록<br>
+                더 많은 이야기를 품을 수 있다고 생각합니다.<br>
+                단순한 모델링을 넘어 감정을 전달할 수 있도록,<br>
+                한 장면이 단순한 화면이 아니라
+                감각적인 경험으로 남을 수 있도록 하겠습니다.</p>
+
+        </section>
+
+        <!-- 오른쪽 ABOUT ME -->
+        <section class="info-right">
+            <!-- <h4>HONG HOGYEONG</h4>
+            <h1>홍호경</h1>
+            <p>1996.12.27</p>
+
+            <br> -->
+            <p class="copy-text"><b>Phone.</b> <a href="tel:010-5594-2728">010-5594-2728</a> </p>
+            <input type="text" id="tempInput" style="position: absolute; left: -1000px; top: -1000px;">
+            <p><b>Email.</b> <span class="light"> <a href="mailto:honghg1227@gmail.com">honghg1227@gmail.com</a> </span>
+            </p>
+            <p><b>Birth.</b> 1996.12.27</p>
+            <br>
+            <h3>EDUCATION</h3>
+            <ul>
+                <li>그린컴퓨터학원 영상과정 교육 수료</li>
+                <li>부경대학교 졸업</li>
+                <li>경상여자고등학교 졸업</li>
+            </ul>
+            <br>
+            <h3>CERTIFICATE</h3>
+            <ul>
+                <li>GTQ그래픽기술자격 일러스트1급</li>
+                <li>컴퓨터활용능력 2급</li>
+            </ul>
+            <br>
+            <h3>SKILLS</h3>
+            <div class="skills">
+                <img src="images/profile/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+                <img src="images/profile/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro">
+                <img src="images/profile/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator">
+                <img src="images/profile/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop">
+                <br>
+                <img src="images/profile/c4d.png" alt="c4d">
+                <img src="images/profile/blender.png" alt="blender">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.oncontextmenu = function () {
+            return false;
+        }	// 오른쪽 클릭 방지
+
+        var omitformtags = ["input", "textarea", "select"]
+        omitformtags = omitformtags.join("|") // 드래그 방지
+
+        function disableselect(e) {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                return false
+        }
+
+        function reEnable() {
+            return true
+        }
+
+        if (typeof document.onselectstart != "undefined")
+            document.onselectstart = new Function("return false")
+        else {
+            document.onmousedown = disableselect
+            document.onmouseup = reEnable
+        }
+    </script>
+
+</body>
+
+</html>

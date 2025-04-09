@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* 425~375까지 반응형 하기.. ?*/
+/* 팝업 반응형까지 생각하기... */
+
+/* 반응형 */
+@media (max-width: 1024px) {
+
+    /* 팝업 자체 */
+    .popup {
+        width: 95%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+    }
+
+    /* 슬라이드 영역과 텍스트 영역을 세로 배치 */
+    .slide-inner {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .popup-slide {
+        width: 100%;
+        height: auto;
+        margin: 0 0 15px 0;
+        /* 아래쪽 여백 추가 */
+    }
+
+    .mySwiper {
+        width: 100%;
+    }
+    .swiper-slide > div {
+        padding-top: 38.25%;
+    }
+    .popup-text {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header p {
+        font-size: 28px;
+    }
+
+    .scroll-text {
+        font-size: 60px;
+    }
+
+    .works {
+        grid-template-columns: 1fr;
+    }
+
+    /* 팝업 자체 */
+    .popup {
+        width: 95%;
+        height: auto;
+        /* 콘텐츠에 맞춰 높이 자동 조정 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+    }
+
+    /* 슬라이드 영역과 텍스트 영역을 세로 배치 */
+    .slide-inner {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .popup-slide {
+        width: 100%;
+        height: auto;
+        margin: 0 0 15px 0;
+        /* 아래쪽 여백 추가 */
+    }
+
+    .mySwiper {
+        width: 100%;
+        height: 300px;
+        /* 슬라이드 높이를 고정하거나 콘텐츠에 맞게 조절 */
+    }
+
+    .popup-text {
+        width: 100%;
+    }
+
+    /* 네비게이션 버튼 크기 조절 */
+    .popup .prev,
+    .popup .next {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-height: 940px) {
+    .popup {
+        height: 650px;
+    }
+}
+
+@media (max-width: 480px) {
+    header p {
+        font-size: 24px;
+    }
+
+    .scroll-text {
+        font-size: 40px;
+    }
+
+    .mySwiper {
+        height: 200px;
+    }
+
+    .popup-text .text-title {
+        font-size: 1rem;
+    }
+}

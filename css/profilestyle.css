@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* 한글 본문 폰트 */
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 메인 문구 폰트 */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  font-family: 'SUIT-Regular';
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  -webkit-user-select: none !important;
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+  background: url(../images/profile/bcc.png) no-repeat left top/100% 120%;
+}
+
+/* 헤더 */
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header p {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+nav ul.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+nav ul.menu li a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav ul.menu li a.active {
+  background: radial-gradient(ellipse 60% 40%, rgba(115, 194, 251, 0.722) 0%, #fff 100%);
+  text-decoration: underline;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* 메인 컨테이너 */
+main {
+  line-height: 2;
+}
+.profile-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+/* 왼쪽 */
+.info-left h2 {
+  font-family: 'GmarketSansMedium';
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.info-left p {
+  font-family: 'SUIT-Regular';
+  font-size: 1rem;
+  padding-top: 220px;
+  text-align: right;
+  background: url(../images/profile/3Dc.png) no-repeat left top/40% 100%;
+}
+.info-left .highlight {
+  background: radial-gradient(ellipse 60% 40%, rgba(115, 194, 251, 0.722) 0%, #fff 100%);
+  font-weight: 900;
+}
+.info-left ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* 오른쪽 */
+.info-right {
+  text-align: left;
+}
+.info-right h1{
+  font-size: 2.5rem;
+}
+.info-right h2 {
+  margin-bottom: 10px;
+}
+.info-right p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.info-right .copy-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.info-right .light {
+  background-color: yellow;
+}
+.info-right ul {
+  margin-left: 2px;
+  /* margin-bottom: 20px; */
+}
+.info-right ul li::before {
+  content: '• ';
+}
+.info-right .skills img {
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    /* 한 컬럼 */
+    gap: 30px;
+    word-break: keep-all;
+  }
+  .info-left,
+  .info-right {
+    text-align: center;
+  }
+  .info-left p{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .info-left h2{
+    font-size: 2.5rem;
+  }
+  .info-left p{
+    background: none;
+  }
+}

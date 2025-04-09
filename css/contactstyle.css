@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    -webkit-user-select: none !important;
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background: #fff;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* 헤더 */
+header {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header p {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+nav ul.menu li a {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav ul.menu li a.active {
+    background: radial-gradient(circle at center, rgba(153, 210, 126, 0.5) 0%, #fff 100%);
+    text-decoration: underline;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+/* contact */
+.contact-container{
+    display: flex;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 80px 50px;
+}
+
+/* 왼쪽 */
+.contact-left{
+    flex: 1;
+    padding-right: 50px;
+    background: url(../images/contact/3d.gif) no-repeat;
+    position: relative;
+}
+.contact-left h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.contact-left p{
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 1rem;
+}
+.contact-left a img{
+    width: 100px;
+    position: absolute;
+    bottom: 0%;
+}
+
+/* 오른쪽 */
+.contact-right{
+    flex: 1;
+    padding-left: 50px;
+}
+.form-group{
+    margin-bottom: 25px;
+}
+.form-group label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.form-group .req{
+    color: #e74c3c;
+    margin-left: 5px;
+}
+.form-group input, .form-group textarea{
+    font-family: 'SUIT-Regular';
+    width: 100%;
+    padding: 12px;
+    border: 1px solid green;
+    font-size: 1rem;
+    outline: none;
+}
+.form-group textarea{
+    resize: none;
+}
+
+.btn-submit{
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+.btn-submit:hover{
+    background: #444;
+}
+.thankyou_message{
+    text-align: center;
+    padding-top: 20px;
+}
+
+  /* 반응형 대응 (너비가 좁아질 때 좌우 영역 세로 배치) */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+    .contact-left{
+        text-align: center;
+        background: none;
+    }
+    .contact-left, .contact-right {
+      padding: 0;
+      border: none;
+    }
+    .contact-left {
+      margin-bottom: 30px;
+    }
+    .contact-left a img{
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }

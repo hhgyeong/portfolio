@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGYEONG</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contactstyle.css">
+</head>
+
+<!-- <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false"> -->
+    <body>
+    <header>
+        <p> <a href="index.html">HONG</a> </p>
+        <nav>
+            <ul class="menu">
+                <li><a href="work.html" class="menu-btn">WORKS</a></li>
+                <li><a href="profile.html" class="menu-btn">PROFILE</a></li>
+                <li><a href="contact.html" class="menu-btn active">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <div class="contact-left">
+                <h1>with HOGYEONG</h1>
+                <p>넓은 상상력과 정교함으로 3D 꿈을 현실로 빚습니다.</p>
+                <a href="https://open.kakao.com/o/sRH6hRph" target="_blank"><img src="images/contact/KakaoTalk.png" alt="카카오톡"></a>
+                <!-- 그 외 비핸스나 비메오, 유튜브 고민중 -->
+            </div>
+            <div class="contact-right">
+                <form action="https://script.google.com/macros/s/AKfycby7LE6jQwDv6NdMLFy5TzVhsX31DZAYSTR1gg6HSNkC7rC6F1VRC6WsqblM6LTmxm4W/exec" method="post" class="gform" id="gform">
+                    <div class="form-group">
+                        <label for="brand">BRAND <span class="req">*</span></label>
+                        <input type="text" id="brand" name="brand" placeholder="브랜드 명을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="request">REQUEST <span class="req">*</span></label>
+                        <textarea name="request" id="request" placeholder="문의 사항을 입력하세요" cols="30" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">SUBMIT</button>
+                    <div style="display: none;" class="thankyou_message"><h2><b>메일 전송에 성공했습니다! <br> 확인 후 회신드리겠습니다.</br></h2></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.oncontextmenu = function () {
+            return false;
+        }	// 오른쪽 클릭 방지
+
+        var omitformtags = ["input", "textarea", "select"]
+        omitformtags = omitformtags.join("|") // 드래그 방지
+
+        function disableselect(e) {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                return false
+        }
+
+        function reEnable() {
+            return true
+        }
+
+        if (typeof document.onselectstart != "undefined")
+            document.onselectstart = new Function("return false")
+        else {
+            document.onmousedown = disableselect
+            document.onmouseup = reEnable
+        }
+    </script>
+    <script data-cfasync="false" type="text/javascript"
+    src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+</body>
+</html>
