@@ -61,7 +61,7 @@ nav ul.menu li a.active {
 .contact-container{
     display: flex;
     max-width: 1200px;
-    margin: 60px auto;
+    margin: 40px auto;
     padding: 80px 50px;
 }
 
