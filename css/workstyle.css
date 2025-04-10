@@ -127,6 +127,9 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.prev, .next{
+    color: #000;
+}
 .prev, .next:hover{
     cursor: pointer;
 }

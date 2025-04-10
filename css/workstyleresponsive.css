@@ -4,6 +4,12 @@
 /* 팝업 반응형까지 생각하기... */
 
 /* 반응형 */
+@media (max-width: 1440px) {
+    .swiper-slide > div {
+        padding-top: 80%;
+    }
+}
+
 @media (max-width: 1024px) {
 
     /* 팝업 자체 */
@@ -32,7 +38,7 @@
         width: 100%;
     }
     .swiper-slide > div {
-        padding-top: 38.25%;
+        padding-top: 42.25%;
     }
     .popup-text {
         width: 100%;
@@ -117,5 +123,11 @@
 
     .popup-text .text-title {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .swiper-slide > div {
+        padding-top: 56.25%;
     }
 }
